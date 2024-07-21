@@ -1,0 +1,143 @@
+#bolinha {
+    width: 3em;
+    height: 3em;
+    background-color: #f8b179;
+    border-radius: 50%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    overflow: hidden;
+}
+
+#title {
+    color: #fefefe;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 2.5em;
+    border-bottom: 3px #f8b179 solid;
+    padding: 0.5em;
+    margin: 0px;
+    margin-bottom: 21px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+main > section:first-of-type {
+    flex: 1;
+    background-color: #2d3250;
+    height: 100%;
+    padding: 0em 1em 0em 1em;
+}
+
+main > section:last-of-type {
+    flex: 2;
+    position: relative;
+    background-color: #161e31;
+    height: 100%;
+}
+
+p {
+    color: #fefefe;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1em;
+    margin: 0px; 
+    padding: 0.5em 0 0.5em 0;
+}
+
+#formula {
+    text-align: center;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1em;
+    color: #676f9d;
+    background-color: #424669;
+    padding-top: 9px;
+    padding-left: 12px;
+    padding-bottom: 9px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+#parametros {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 45%;
+}
+
+label > input {
+    background-color: transparent;
+    border-radius: 4px;
+    font-size: 1em;
+    height: 3rem;
+    border-width: 0px;
+    color: #fefefe;
+    font-family: "Nunito Sans", sans-serif;
+    border-radius: 0px;
+    outline: none;
+}
+
+label:focus-within {
+    border-left: 3px solid #f8b179;
+}
+
+#botoes-controle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 45%;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8b179;
+    color: #2d3250;
+    font-weight: 500;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1em;
+    border-width: 0px;
+    border-radius: 4px;
+    border-radius: 50%;
+    height: 3em;
+    width: 3em;
+    outline: none;
+}
+
+button > img {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+button:disabled {
+    background-color: #676f9d;
+    color: #2d3250;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

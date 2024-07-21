@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./imgs/favicon.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/style.css">
+        <title>Pêndulo Simulator S2</title>
+    </head>
+    <body>
+        <main>
+            <section>
+                <h1 id="title">Pêndulo Simulator!</h1>
+                <p>Este é um exemplo de um pêndulo simples, onde a bolinha se movimenta de acordo com a força da gravidade.</p>
+                <p>O movimento da boliha está sendo calculado com base na EDO derivada:</p>
+                <p id="formula">d<sup>2</sup>x/dt<sup>2</sup> + w<sup>2</sup>x = 0</p>
+                <p>Você pode alterar os parâmetros para ajustar as condições em que ela se movimento.</p>
+
+                <form id="parametros">
+                    <label id="label-input-comprimento">Comprimento da haste: <input type="number" id="input-comprimento" min="1" value="150"></label>
+                    <label id="label-input-gravidade">Gravidade (m/s): <input type="number" id="input-gravidade" min="1" value="9.8"></label>
+                    <label id="label-input-angulo">Ângulo inicial (graus): <input type="number" id="input-angulo-inicial" min="0" max="180" value="45"></label>
+                </form>
+
+                <div id="botoes-controle">
+                    <button id="botao-play"><img src="./imgs/play.png" alt="Botão de play"></button>
+                    <button id="botao-pause" disabled><img src="./imgs/pause.png" alt="Botão de pausa"></button>
+                    <button id="botao-reset"><img src="./imgs/restart.png" alt="Botão de reinicar a simulação"></button>
+                </div>
+            </section>
+    
+            <section id="pendulo">
+                <div id="bolinha"></div>
+            </section>
+        </main>
+
+        <script src="./scripts/constantes.js"></script>
+        <script src="./scripts/movimento.js"></script>
+        <script src="./scripts/index.js"></script>
+    </body>
+</html>
